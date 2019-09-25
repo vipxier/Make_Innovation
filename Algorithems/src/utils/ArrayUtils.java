@@ -12,4 +12,14 @@ public class ArrayUtils {
 		
 		System.out.println(strB.toString());
 	}
+	
+	public static int[] initializeArrayFromParent(int[] parent, int start, int end)
+	{
+	    int[] result = new int[end-start+1];
+	    for(int i = start; i <= end; i ++)
+	    {
+	        result[i-start] = parent[i]; 
+	    }
+	    return result;
+	}
 }
