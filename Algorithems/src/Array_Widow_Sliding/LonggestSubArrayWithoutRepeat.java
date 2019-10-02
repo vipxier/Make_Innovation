@@ -13,7 +13,7 @@ public class LonggestSubArrayWithoutRepeat
         int startPosition = 0;
         int maxWindowSize = 1;
 
-        for (int i = 1; i < s.length() - 1 && startPosition < s.length(); i++)
+        for (int i = 1; i < s.length() && startPosition < s.length(); i++)
         {
             if (!s.substring(startPosition, startPosition + windowSize)
                     .contains(new StringBuilder().append(s.charAt(i)).toString()))
@@ -28,6 +28,7 @@ public class LonggestSubArrayWithoutRepeat
                 windowSize = 1;
             }
         }
+        //maxWindowSize = Math.max(maxWindowSize, windowSize);
         return maxWindowSize;
 
     }
@@ -48,7 +49,7 @@ public class LonggestSubArrayWithoutRepeat
 
     public static void main(String[] args)
     {
-        String str = "pwwkew";
+        String str = "dvdf";
 
         System.out.println(lengthOfLongestSubstring(str));
     }
