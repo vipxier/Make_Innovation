@@ -13,14 +13,14 @@ public class BinaryTree
      */
     public static BinaryTree create() {
       BinaryTree tree = new BinaryTree();
-      TreeNode root = new TreeNode("4");
+      TreeNode root = new TreeNode(4);
       tree.root = root;
-      tree.root.left = new TreeNode("2");
-      tree.root.left.left = new TreeNode("1");
+      tree.root.left = new TreeNode(2);
+      tree.root.left.left = new TreeNode(1);
 
-      tree.root.left.right = new TreeNode("3");
-      tree.root.right = new TreeNode("5");
-      tree.root.right.right = new TreeNode("6");
+      tree.root.left.right = new TreeNode(3);
+      tree.root.right = new TreeNode(5);
+      tree.root.right.right = new TreeNode(6);
 
       return tree;
     }
@@ -48,7 +48,7 @@ public class BinaryTree
         }
         
         inorderTraverseRecursion(node.left);
-        System.out.printf("%s ", node.value);
+        System.out.printf("%s ", node.data);
         inorderTraverseRecursion(node.right);
     }
     
@@ -73,7 +73,7 @@ public class BinaryTree
             else
             {
                 currentNode = nodeStack.pop();
-                System.out.printf("%s ", currentNode.value);
+                System.out.printf("%s ", currentNode.data);
                 currentNode = currentNode.right;
             }
         }
@@ -94,4 +94,10 @@ public class BinaryTree
     
     public void postOrderTraverseRecursion(TreeNode node)
     {}
+    
+    
+    public static void insert(int data)
+    {
+    	
+    }
 }
