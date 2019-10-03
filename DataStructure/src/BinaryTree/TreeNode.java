@@ -59,141 +59,159 @@ public class TreeNode {
 			this.right.printInOrder();
 		}
 	}
-	
-	public void printPreOrder()
-	{
+
+	public void printPreOrder() {
 		System.out.print(" " + this.data);
-		if(this.left != null)
-		{
+		if (this.left != null) {
 			this.left.printPreOrder();
 		}
-		
-		if(this.right != null)
-		{
+
+		if (this.right != null) {
 			this.right.printPreOrder();
 		}
 	}
-	
-	public void printPostOrder()
-	{
-		if(this.left != null)
-		{
+
+	public void printPostOrder() {
+		if (this.left != null) {
 			this.left.printPreOrder();
 		}
-		
-		if(this.right != null)
-		{
+
+		if (this.right != null) {
 			this.right.printPreOrder();
 		}
 		System.out.print(" " + this.data);
 	}
-	
-	public void InOrderTraverse(TreeNode node)
-	{
-		if(node == null)
-		{
+
+	public void InOrderTraverse(TreeNode node) {
+		if (node == null) {
 			return;
 		}
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode currentNode = node;
-		while(node != null || !stack.isEmpty())
-		{
-			if(node != null) {
-			stack.push(currentNode);
-			currentNode = node.left;
-			}
-			else
-			{
+		while (node != null || !stack.isEmpty()) {
+			if (node != null) {
+				stack.push(currentNode);
+				currentNode = node.left;
+			} else {
 				currentNode = stack.pop();
 				System.out.print(currentNode.data);
 				currentNode = currentNode.right;
 			}
 		}
 	}
-	
-	public void preOrderTraverse(TreeNode node)
-	{
-		if(node == null)
-		{
+
+	public void preOrderTraverse(TreeNode node) {
+		if (node == null) {
 			return;
 		}
-		
+
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		stack.push(node);
-		while(!stack.isEmpty())
-		{
+		while (!stack.isEmpty()) {
 			TreeNode currentNode = stack.pop();
 			System.out.print(" " + currentNode.data);
-			if(currentNode.right != null)
-			{
+			if (currentNode.right != null) {
 				stack.push(right);
 			}
-			
-			if(currentNode.left != null)
-			{
+
+			if (currentNode.left != null) {
 				stack.push(left);
 			}
 		}
-		
+
 	}
-	
-	public void postOrderTraverse(TreeNode node)
-	{
-		if(node == null)
-		{
+
+	public void postOrderTraverse(TreeNode node) {
+		if (node == null) {
 			return;
 		}
-		
+
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode prevNode = null;
 		stack.push(node);
-		
-		while(!stack.isEmpty())
-		{
+
+		while (!stack.isEmpty()) {
 			TreeNode currentNode = stack.peek();
-			
-			if(prevNode == null || prevNode.left == currentNode || prevNode.right == currentNode)
-			{
-				if(currentNode.left != null)
-				{
+
+			if (prevNode == null || prevNode.left == currentNode || prevNode.right == currentNode) {
+				if (currentNode.left != null) {
 					stack.push(currentNode.left);
-				}
-				else if(currentNode.right != null)
-				{
+				} else if (currentNode.right != null) {
 					stack.push(currentNode.right);
-				}
-				else
-				{
+				} else {
 					stack.pop();
 					System.out.print(" " + currentNode.data);
 				}
-			}
-			else if(currentNode.left == prevNode)
-			{
-				if(currentNode.right != null)
-				{
+			} else if (currentNode.left == prevNode) {
+				if (currentNode.right != null) {
 					stack.push(currentNode.right);
-				}
-				else
-				{
+				} else {
 					System.out.print(" " + currentNode.data);
 					stack.pop();
 				}
-			}
-			else if(currentNode.right == prevNode)
-			{
-				if(currentNode.left != null)
-				{
+			} else if (currentNode.right == prevNode) {
+				if (currentNode.left != null) {
 					stack.push(currentNode.left);
-				}
-				else	
-				{
+				} else {
 					System.out.print(" " + currentNode.data);
 				}
 			}
-			
+
 			prevNode = currentNode;
 		}
-		
+
 	}
+
+	public TreeNode deleteNode(TreeNode root, int value) {
+		if(root == null)
+		{
+			return null;
+		}
+		
+		if(root.data > value)
+		{
+			root.left = deleteNode(root.left, value);
+		}
+		else if (root.data < value)
+		{
+			root.right = deleteNode(root.right, value);
+		}
+		else
+		{
+			if(root.left != null && root.right != null)
+			{
+				TreeNode temp = root;
+				TreeNode minimumNode = minimumNode(root.right);
+				root.data = minimumNode.data;
+				deleteNode(root.right, minimumNode.data);
+				
+			}
+			else if(root.left != null)
+			{
+				root = root.left;
+			}
+			else if(root.right != null)
+			{
+				root = root.right;
+			}
+			else
+			{
+				root = null;
+			}
+		}
+		return root;
+	}
+	
+	public TreeNode minimumNode(TreeNode root)
+	{
+		if(root.left == null)
+		{
+			return root;
+		}
+		else
+		{
+			return minimumNode(root.left);
+		}
+	}
+	
 }
