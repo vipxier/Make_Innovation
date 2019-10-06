@@ -33,4 +33,16 @@ public class InvertTree {
 		 
 		 return root;
 	 }
+	 
+	 public TreeNode invertTree_R(TreeNode root)
+	 {
+		 if (root != null)
+		 {
+			 root.left = invertTree_R(root.right);
+			 root.right = invertTree_R(root.left);
+			 
+		 }
+		 
+		 return root;
+	 }
 }
