@@ -52,6 +52,6 @@ public class ArrayProductExceptIndex {
 	public static void main(String[] args)
 	{
 		int[] array = {1, 2, 3, 4};
-		ArrayUtils.printArray(arrayProduct(array, 3));
+		ArrayUtils.printSingleDimentionArray(arrayProduct(array, 3));
 	}
 }

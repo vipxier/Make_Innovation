@@ -128,6 +128,6 @@ public class Reorder_an_array_according_to_given_indexes
         int[] dataArray = { 1, 2, 3, 4, 5 };
         int[] indexArray = { 2, 4, 3, 0, 1 };
 
-        ArrayUtils.printArray(reorder(dataArray, indexArray));
+        ArrayUtils.printSingleDimentionArray(reorder(dataArray, indexArray));
     }
 }
