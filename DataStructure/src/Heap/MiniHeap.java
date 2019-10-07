@@ -1,3 +1,4 @@
+package Heap;
 
 public class MiniHeap {
 	int size = 0;
@@ -102,9 +103,5 @@ public class MiniHeap {
 		items[size] = value;
 		size++;
 		heapifyUp();
-	}
-
-	public void delete(int value) {
-
 	}
 }
