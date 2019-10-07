@@ -3,7 +3,7 @@ public class MergeSortTwoDimentionalArray {
 
 	public void mergeSort(int[][] array)
 	{
-		sort(array, 0. array.length-1);
+		sort(array, 0, array.length-1);
 	}
 	
 	private void sort(int[][] array, int start, int end)
