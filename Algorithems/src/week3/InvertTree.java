@@ -2,8 +2,6 @@ package week3;
 
 import java.util.Stack;
 
-import BinaryTree.TreeNode;
-
 public class InvertTree {
 
 	 public TreeNode invertTree(TreeNode root) {

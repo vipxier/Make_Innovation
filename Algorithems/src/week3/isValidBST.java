@@ -1,7 +1,5 @@
 package week3;
 
-import BinaryTree.TreeNode;
-
 public class isValidBST {
 
 	public static boolean isValidBST(TreeNode root)
