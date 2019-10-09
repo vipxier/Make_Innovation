@@ -33,9 +33,8 @@ public class CreateTreeByPreOrderAndInorder {
 		for (int i = 0; i < inorder.length; i++) {
 			if (inorder[i] == currentNodeValue) {
 				return i;
-			}
-
-			return -1;
+			}		
 		}
+		return -1;
 	}
 }
