@@ -62,8 +62,7 @@ public class Graph1 {
 		
 		result.add(root);
 		queue.add(root);
-		
-		
+	
 		while(!queue.isEmpty())
 		{
 			String vertex = queue.poll();
@@ -71,8 +70,8 @@ public class Graph1 {
 			{
 				if(!result.contains(vertex))
 				{
-					result.add(vertex);
-					queue.add(vertex);
+					result.add(v.label);
+					queue.add(v.label);
 				}
 				
 			}
