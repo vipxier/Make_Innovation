@@ -40,7 +40,7 @@ public class Anagram
         char[] tArray = t.toCharArray();
         mergeSort(sArray, 0, s.length() - 1);
         mergeSort(tArray, 0, t.length() - 1);
-        for (int i = 0; i < s.length(); i++)
+        for (int i = 0; i < s.length()-1; i++)
         {
             if (sArray[i] != tArray[i])
             {
@@ -112,6 +112,6 @@ public class Anagram
 
     public static void main(String[] args)
     {
-        System.out.println(isAnagram_MergeSort("anagram", "nagaram"));
+        System.out.println(isAnagram_MergeSort("anagram", "naagram"));
     }
 }
