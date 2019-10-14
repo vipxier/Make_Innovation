@@ -1,3 +1,5 @@
+package Charpter2;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,10 +15,8 @@ public class RemoveDuplicateInUnsortedList {
 		Node currentNode = head;
 		while (currentNode != null) {
 			if (!set.contains(currentNode.value)) {
-				
 				set.add(currentNode.value);
 				newCurrentNode.next = new Node(currentNode.value);
-				newCurrentNode = newCurrentNode.next;
 			}
 			currentNode = currentNode.next;
 		}
@@ -32,6 +32,7 @@ public class RemoveDuplicateInUnsortedList {
 		head.appendToTail(1);
 		head.appendToTail(12);
 		head.appendToTail(2);
-		System.out.println(removeDuplicate(head).printAllNodes());
+		
+		System.out.println(Node.outputValues(head));
 	}
 }
