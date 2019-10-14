@@ -17,7 +17,7 @@ public class PracticeGraph
     public void AddNode(int value)
     {
         Node currentNode = new Node(value);
-        map.putIfAbsent(currentNode, new ArrayList<Node>();
+        map.putIfAbsent(currentNode, new ArrayList<Node>());
     }
 
     public void addEdge(int value1, int value2)
