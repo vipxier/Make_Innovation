@@ -1,5 +1,7 @@
 package Charpter2;
 
+import DataStructures.Node;
+
 public class DeleteMiddleNode
 {
     public static void deleteMiddleNode(Node root)

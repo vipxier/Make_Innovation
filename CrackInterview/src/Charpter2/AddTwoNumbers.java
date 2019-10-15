@@ -1,5 +1,7 @@
 package Charpter2;
 
+import DataStructures.Node;
+
 public class AddTwoNumbers
 {
     public static Node addition(Node node1, Node node2)

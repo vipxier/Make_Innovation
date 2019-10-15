@@ -1,5 +1,7 @@
 package Charpter2;
 
+import DataStructures.Node;
+
 public class AddTwoNumbers_Reverse
 {
     public static Node addTwoNumbers_R(Node node1, Node node2)

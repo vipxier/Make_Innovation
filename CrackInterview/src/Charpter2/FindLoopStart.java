@@ -3,6 +3,8 @@ package Charpter2;
 import java.util.HashSet;
 import java.util.Set;
 
+import DataStructures.Node;
+
 public class FindLoopStart
 {
     public static Node findLoopStart(Node root)

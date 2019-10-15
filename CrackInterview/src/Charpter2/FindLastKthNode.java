@@ -3,6 +3,8 @@ package Charpter2;
 import java.util.ArrayList;
 import java.util.List;
 
+import DataStructures.Node;
+
 public class FindLastKthNode
 {
     public static Node findLastKth(Node root, int index)

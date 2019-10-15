@@ -3,6 +3,8 @@ package Charpter2;
 import java.util.HashSet;
 import java.util.Set;
 
+import DataStructures.Node;
+
 public class RemoveDuplicateInUnsortedList {
 	
 	public static Node removeDuplicate(Node head) {

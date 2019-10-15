@@ -1,5 +1,7 @@
 package Charpter2;
 
+import DataStructures.Node;
+
 public class PartitionList
 {
     public static Node partitionTheList(Node root, int value)
