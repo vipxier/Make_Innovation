@@ -182,7 +182,7 @@ public class TreeNode {
 			if(root.left != null && root.right != null)
 			{
 				TreeNode temp = root;
-				TreeNode minimumNode = minimumNode(root.right);
+				TreeNode minimumNode = minimumNode(temp.right);
 				root.data = minimumNode.data;
 				deleteNode(root.right, minimumNode.data);
 				
@@ -190,7 +190,7 @@ public class TreeNode {
 			else if(root.left != null)
 			{
 				root = root.left;
-			}
+			} 
 			else if(root.right != null)
 			{
 				root = root.right;
