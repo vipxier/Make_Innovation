@@ -2,11 +2,11 @@ package utils;
 
 public class TreeNode
 {
-    int data;
-    TreeNode left, right;
+    public int val;
+    public TreeNode left, right;
     
     public TreeNode(int value) {
-        this.data = value;
+        this.val = value;
         this.left = this.right = null;
     }
 }

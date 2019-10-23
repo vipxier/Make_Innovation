@@ -9,7 +9,7 @@ public class StackUtils
         StringBuilder strb = new StringBuilder();
         while(!stack.isEmpty())
         {
-            strb.append(" ").append(stack.pop().data);
+            strb.append(" ").append(stack.pop().val);
         }
         System.out.println(strb.toString());
     }
