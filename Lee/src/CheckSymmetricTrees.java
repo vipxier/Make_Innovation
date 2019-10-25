@@ -2,7 +2,7 @@ import utils.TreeNode;
 
 public class CheckSymmetricTrees
 {
-    public static boolean isSymmetric(TreeNode root)
+    public boolean isSymmetric(TreeNode root)
     {
         if(root == null)
         {
@@ -14,7 +14,7 @@ public class CheckSymmetricTrees
         }
     }
 
-    private static boolean areSymmetric(TreeNode node1, TreeNode node2)
+    private  boolean areSymmetric(TreeNode node1, TreeNode node2)
     {
         if (node1 == null && node2 == null)
         {
